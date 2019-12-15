@@ -5,9 +5,9 @@ namespace PersonExample
 {
     internal class Program
     {
-        private static List<Person> _people = new List<Person>();
+        private static readonly List<Person> People = new List<Person>();
 
-        private static void Main(string[] args)
+        private static void Main()
         {
             while (true)
             {
@@ -19,7 +19,7 @@ namespace PersonExample
                 var gender = Console.ReadLine();
 
                 var person = new Person(firstName, lastName, gender);
-                _people.Add(person);
+                People.Add(person);
 
                 Console.Write("Add another person? ");
                 var answer = Console.ReadLine();
@@ -27,7 +27,7 @@ namespace PersonExample
                     break;
             }
 
-            foreach (var person in _people)
+            foreach (var person in People)
             {
                 Console.WriteLine($"You entered: {person.FullName} ({person.GenderName})");
             }
