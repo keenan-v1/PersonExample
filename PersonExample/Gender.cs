@@ -24,7 +24,7 @@
             {
                 Gender.Male => "male",
                 Gender.Female => "female",
-                _ => "non-binary"
+                _ => "a non-binary gender"
             };
     }
 }
